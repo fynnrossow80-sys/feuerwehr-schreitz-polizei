@@ -3,112 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101d35">
-<title>Feuerwehr Schreitz | Polizei-Dienstgrade</title>
+<meta name="theme-color" content="#0b1424">
+<meta name="description" content="Übersicht der Polizei-Dienstgrade bei Feuerwehr Schreitz.">
+<title>Polizei | Feuerwehr Schreitz</title>
 <style>
-:root{--navy:#101d35;--navy2:#182b4b;--blue:#2463a6;--gold:#d9ad55;--ink:#172338;--muted:#68758a;--paper:#f3f6fb;--line:#e2e8f0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-header{background:linear-gradient(125deg,#0b1529,#1b3760);color:white;padding:24px max(22px,calc((100% - 1180px)/2));position:relative;overflow:hidden}
-header:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff18;border-radius:50%;right:-110px;top:-260px;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff06}
-.topline{display:flex;align-items:center;gap:14px;position:relative;z-index:1}.crest{width:48px;height:48px;border:1px solid #d9ad5580;border-radius:14px;display:grid;place-items:center;color:var(--gold);font-size:23px;font-weight:800}
-.brand small{display:block;color:#c4d0e1;letter-spacing:.16em;text-transform:uppercase;font-size:10px;font-weight:700}.brand strong{font-size:17px;letter-spacing:.02em}
-.hero{max-width:1180px;margin:45px auto 18px;position:relative;z-index:1}.eyebrow{color:#e8c77f;font-size:12px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.02;margin:12px 0 13px;letter-spacing:-.04em}.hero p{margin:0;color:#d2dbea;font-size:16px;max-width:610px;line-height:1.65}
-main{max-width:1180px;margin:0 auto;padding:28px 22px 70px}.toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:28px}.intro{color:var(--muted);font-size:14px}.search{width:min(100%,330px);padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit;outline:none;box-shadow:0 3px 12px #17233808}.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2463a620}
-.section{margin:30px 0 38px}.section-head{display:flex;align-items:center;gap:12px;margin-bottom:15px}.section-head:after{content:"";height:1px;background:var(--line);flex:1}.section h2{font-size:19px;margin:0;letter-spacing:-.02em}.count{font-size:11px;color:var(--muted);background:#e8edf5;padding:5px 9px;border-radius:30px;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px}.rank{min-height:82px;background:white;border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;align-items:center;gap:16px;box-shadow:0 5px 18px #14233c08;transition:transform .18s,box-shadow .18s,border-color .18s}.rank:hover{transform:translateY(-3px);box-shadow:0 12px 25px #14233c12;border-color:#c8d5e7}.rank-name{font-weight:700;font-size:14px;line-height:1.4}.insignia{display:none}.rank-stars{color:var(--star-color,#c18a20);font-size:19px;letter-spacing:2px;white-space:nowrap;margin-left:5px;vertical-align:middle}.rank{gap:14px}.rank-info{min-width:0}.rank-num{font-size:10px;color:#8793a5;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px;font-weight:800}
-.empty{display:none;padding:30px;text-align:center;color:var(--muted);background:white;border-radius:14px}
-footer{background:#0b1529;color:#b9c6d8;text-align:center;padding:24px;font-size:12px}footer strong{color:white}
-@media(max-width:560px){header{padding:19px 20px}.hero{margin:35px 0 12px}.grid{grid-template-columns:1fr 1fr;gap:9px}.rank{padding:12px;min-height:110px;gap:10px;align-items:flex-start;flex-direction:column}.rank-name{font-size:13px}.toolbar{align-items:stretch}.search{width:100%}}
+:root{--bg:#eef2f7;--ink:#172235;--muted:#65738a;--navy:#0b1424;--navy2:#142844;--blue:#4b9de8;--line:#dce4ee;--gold:#d9b36b;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+header{color:white;background:radial-gradient(ellipse at 82% 10%,#244a75 0,transparent 34%),linear-gradient(125deg,#08111f,#142b49 70%,#183b60);overflow:hidden}
+nav{max-width:1160px;margin:auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff20}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border:1px solid #d9b36b88;border-radius:13px;display:grid;place-items:center;color:var(--gold);font-weight:900;letter-spacing:-1px}.brand b{display:block;font-size:15px;letter-spacing:.04em}.brand small{display:block;color:#aebed1;font-size:10px;text-transform:uppercase;letter-spacing:.17em;margin-top:3px}
+.navlinks{display:flex;gap:20px}.navlinks a{color:#d5deea;text-decoration:none;font-size:12px;font-weight:700}.navlinks a:hover{color:var(--gold)}
+.hero{max-width:1160px;margin:auto;padding:76px 24px 72px;position:relative}.kicker{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-.055em;margin:17px 0}.hero p{max-width:620px;color:#c5d2e2;line-height:1.75;font-size:16px;margin:0}.hero-tag{display:inline-flex;align-items:center;gap:9px;margin-top:27px;border:1px solid #ffffff35;background:#ffffff0c;padding:10px 14px;border-radius:30px;color:#e7edf5;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:#73c5a1;box-shadow:0 0 0 4px #73c5a122}
+main{max-width:1160px;margin:auto;padding:42px 24px 76px}.intro-row{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.intro-row h2{font-size:26px;letter-spacing:-.035em;margin:0 0 7px}.intro-row p{margin:0;color:var(--muted);font-size:13px}.search-wrap{width:min(100%,340px);position:relative}.search-wrap span{position:absolute;left:15px;top:12px;color:#8390a3}.search{width:100%;padding:13px 15px 13px 42px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit;font-size:13px;outline:none;box-shadow:0 5px 18px #12233d08}.search:focus{border-color:#6b9dce;box-shadow:0 0 0 3px #4b9de822}
+.quicknav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 34px}.quicknav a{padding:8px 12px;border:1px solid var(--line);border-radius:30px;background:#ffffff;color:#506078;text-decoration:none;font-size:11px;font-weight:750}.quicknav a:hover{border-color:#8eb2d9;color:#245b91}
+.rank-section{margin:34px 0 42px}.section-title{display:flex;align-items:center;gap:12px;margin-bottom:15px}.section-title h3{margin:0;font-size:18px;letter-spacing:-.02em}.section-title:after{content:"";height:1px;background:var(--line);flex:1}.badge{font-size:10px;color:#64748b;background:#e1e8f1;padding:5px 9px;border-radius:20px;font-weight:800;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}.rank-card{background:var(--white);border:1px solid var(--line);border-radius:15px;padding:17px 18px;min-height:91px;display:flex;align-items:center;gap:15px;box-shadow:0 5px 18px #15253c08;transition:.18s}.rank-card:hover{transform:translateY(-3px);border-color:#b8cce2;box-shadow:0 12px 24px #15253c12}.rank-index{flex:none;width:36px;height:36px;border-radius:11px;background:#edf3f9;color:#54708f;display:grid;place-items:center;font-size:11px;font-weight:900}.rank-text{min-width:0}.rank-name{font-size:13px;font-weight:750;line-height:1.45}.rank-stars{display:block;margin-top:5px;letter-spacing:3px;font-size:15px;line-height:1.1;min-height:16px}.rank-stars.none{display:none}
+.note{margin-top:38px;padding:18px 20px;border:1px solid #d8e2ed;background:#e7edf5;border-radius:14px;color:#58677c;font-size:12px;line-height:1.7}.note b{color:#25354b}.empty{display:none;text-align:center;padding:35px;background:white;border:1px solid var(--line);border-radius:14px;color:var(--muted)}
+footer{background:var(--navy);color:#9eafc4;padding:30px 24px;text-align:center;font-size:11px;line-height:1.8}footer b{color:white;letter-spacing:.12em}footer a{color:#d8bd83;text-decoration:none}
+@media(max-width:650px){nav{padding:16px 18px}.navlinks{gap:12px}.navlinks a{font-size:11px}.hero{padding:58px 20px 55px}main{padding:32px 18px 58px}.intro-row{align-items:stretch;flex-direction:column}.search-wrap{width:100%}.cards{grid-template-columns:1fr 1fr;gap:9px}.rank-card{padding:13px;min-height:100px;align-items:flex-start;flex-direction:column;gap:8px}.rank-index{width:28px;height:28px}.rank-name{font-size:12px}.quicknav{gap:6px}}
+@media(max-width:370px){.navlinks{gap:8px}.navlinks a{font-size:10px}.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
-  <div class="topline">
-    <div class="crest">FS</div>
-    <div class="brand"><small>Feuerwehr Schreitz</small><strong>Polizei · Dienstgrade</strong></div>
-  </div>
-  <div class="hero">
-    <div class="eyebrow">Dienstgradübersicht</div>
-    <h1>Polizei-Ränge</h1>
-    <p>Die Dienstgrade der Polizei bei Feuerwehr Schreitz – übersichtlich nach Laufbahnen und Führungspositionen geordnet.</p>
-  </div>
+<header id="start">
+<nav>
+ <div class="brand"><div class="logo">FS</div><div><b>FEUERWEHR SCHREITZ</b><small>Polizei · Dienstgrade</small></div></div>
+ <div class="navlinks"><a href="#dienstgrade">Dienstgrade</a><a href="#info">Info</a></div>
+</nav>
+<div class="hero">
+ <div class="kicker">Offizielle Übersicht · Feuerwehr Schreitz</div>
+ <h1>Polizei-<br>Dienstgrade.</h1>
+ <p>Hier findest du die Dienstgrade der Polizei übersichtlich nach Laufbahnen geordnet – vom Einstieg bis zu den höchsten Führungspositionen.</p>
+ <div class="hero-tag"><i class="dot"></i> Dienstgradverzeichnis</div>
+</div>
 </header>
-<main>
-  <div class="toolbar">
-    <div class="intro">Alle Dienstgrade auf einen Blick.</div>
-    <input id="search" class="search" type="search" placeholder="Dienstgrad suchen …" aria-label="Dienstgrad suchen">
-  </div>
-  <div id="sections"></div>
-  <div id="empty" class="empty">Kein passender Dienstgrad gefunden.</div>
+<main id="dienstgrade">
+ <div class="intro-row">
+  <div><h2>Alle Dienstgrade</h2><p>Wähle eine Laufbahn oder suche direkt nach einem Rang.</p></div>
+  <label class="search-wrap"><span>⌕</span><input id="search" class="search" type="search" placeholder="Dienstgrad suchen …" aria-label="Dienstgrad suchen"></label>
+ </div>
+ <div class="quicknav" id="quicknav"></div>
+ <div id="sections"></div>
+ <div id="empty" class="empty">Kein Dienstgrad gefunden. Versuche einen anderen Suchbegriff.</div>
+ <aside class="note" id="info"><b>Hinweis zu den Sternen:</b> Die Sterne und Farben dienen der vereinfachten Darstellung der Dienstgrade. Die genaue Kennzeichnung kann je nach Bundesland und Dienstvorschrift abweichen. Diese Seite ist eine inoffizielle Übersicht für Feuerwehr Schreitz.</aside>
 </main>
-<footer><strong>FEUERWEHR SCHREITZ</strong><br>Polizei-Dienstgradübersicht · Inoffizielle Informationsseite</footer>
+<footer><b>FEUERWEHR SCHREITZ</b><br>Polizei-Dienstgradübersicht · <a href="#start">Nach oben ↑</a></footer>
 <script>
-const groups = [
- ["Einstieg",[
-  ["Praktikant",0]
- ]],
- ["Mittlerer Dienst",[
-  ["Polizeimeisteranwärter (1/2)",1],
-  ["Polizeimeisteranwärter (2/2)",1],
-  ["Polizeimeister",2],
-  ["Polizeiobermeister",3],
-  ["Polizeihauptmeister",4],
-  ["Erster Polizeihauptmeister",5]
- ]],
- ["Gehobener Dienst",[
-  ["Polizeikommissaranwärter (1/2)",0],
-  ["Polizeikommissaranwärter (2/2)",0],
-  ["Polizeikommissar",1],
-  ["Polizeioberkommissar",2],
-  ["Polizeikommandant (A11)",3],
-  ["Polizeihauptkommissar (A12)",4],
-  ["Erster Polizeihauptkommissar",5],
-  ["Erster Polizeihauptkommissar mit Amtszulage",5]
- ]],
- ["Höherer Dienst",[
-  ["Polizeirat",1],
-  ["Polizeioberrat",2],
-  ["Polizeidirektor",3],
-  ["Leitender Polizeidirektor",4]
- ]],
- ["Führung",[
-  ["Direktor der Polizei",4],
-  ["Landespolizeidirektor",4],
-  ["Polizeivizepräsident",4],
-  ["Polizeipräsident",4]
- ]]
+const groups=[
+ {title:"Einstieg",color:"#8b9bad",ranks:[["Praktikant",0]]},
+ {title:"Mittlerer Dienst",color:"#2387d4",ranks:[["Polizeimeisteranwärter (1/2)",1],["Polizeimeisteranwärter (2/2)",1],["Polizeimeister",2],["Polizeiobermeister",3],["Polizeihauptmeister",4],["Erster Polizeihauptmeister",5]]},
+ {title:"Gehobener Dienst",color:"#9aa7b7",ranks:[["Polizeikommissaranwärter (1/2)",0],["Polizeikommissaranwärter (2/2)",0],["Polizeikommissar",1],["Polizeioberkommissar",2],["Polizeikommandant (A11)",3],["Polizeihauptkommissar (A12)",4],["Erster Polizeihauptkommissar",5],["Erster Polizeihauptkommissar mit Amtszulage",5]]},
+ {title:"Höherer Dienst",color:"#c99a35",ranks:[["Polizeirat",1],["Polizeioberrat",2],["Polizeidirektor",3],["Leitender Polizeidirektor",4]]},
+ {title:"Führung",color:"#c99a35",ranks:[["Direktor der Polizei",4],["Landespolizeidirektor",4],["Polizeivizepräsident",4],["Polizeipräsident",4]]}
 ];
-const root=document.getElementById("sections"), search=document.getElementById("search"), empty=document.getElementById("empty");
-function insignia(count){
- return '<div class="insignia" role="img" aria-label="'+count+' Sterne">'+
-   Array.from({length:Math.max(1,count)},()=>'<span class="star">★</span>').join('')+
-   '</div>';
-}
-function render(q=""){
- root.innerHTML="";let shown=0;
- groups.forEach(([title,ranks])=>{
-  const matches=ranks.filter(([name])=>name.toLocaleLowerCase("de").includes(q.toLocaleLowerCase("de")));
-  if(!matches.length)return;shown+=matches.length;
-  const section=document.createElement("section");section.className="section";section.dataset.laufbahn=title;
-  const head=document.createElement("div");head.className="section-head";
-  const h=document.createElement("h2");h.textContent=title;
-  const count=document.createElement("span");count.className="count";count.textContent=matches.length+" Ränge";
-  head.append(h,count);section.append(head);
-  const grid=document.createElement("div");grid.className="grid";
-  matches.forEach(([name,stars],i)=>{
-   const card=document.createElement("article");card.className="rank";
-   const info=document.createElement("div");info.className="rank-info";
-   const num=document.createElement("div");num.className="rank-num";num.textContent="Dienstgrad";
+const root=document.getElementById("sections"),search=document.getElementById("search"),empty=document.getElementById("empty"),quick=document.getElementById("quicknav");
+quick.innerHTML=groups.map((g,i)=>'<a href="#gruppe-'+i+'">'+g.title+'</a>').join("");
+function render(query=""){
+ root.innerHTML="";let total=0;
+ groups.forEach((group,i)=>{
+  const matches=group.ranks.filter(r=>r[0].toLocaleLowerCase("de").includes(query.toLocaleLowerCase("de")));
+  if(!matches.length)return;total+=matches.length;
+  const section=document.createElement("section");section.className="rank-section";section.id="gruppe-"+i;
+  const title=document.createElement("div");title.className="section-title";
+  const h=document.createElement("h3");h.textContent=group.title;
+  const badge=document.createElement("span");badge.className="badge";badge.textContent=matches.length+" Ränge";
+  title.append(h,badge);section.append(title);
+  const cards=document.createElement("div");cards.className="cards";
+  matches.forEach(([name,stars],j)=>{
+   const card=document.createElement("article");card.className="rank-card";
+   const index=document.createElement("div");index.className="rank-index";index.textContent=String(j+1).padStart(2,"0");
+   const text=document.createElement("div");text.className="rank-text";
    const label=document.createElement("div");label.className="rank-name";label.textContent=name;
-   const starsLabel=document.createElement("span");starsLabel.className="rank-stars";
-   const starColor=title==="Mittlerer Dienst"?"#2387d4":title==="Gehobener Dienst"?"#aeb8c5":"#c99a28";
-   starsLabel.style.setProperty("--star-color",starColor);
-   starsLabel.textContent="★".repeat(stars);
-   label.append(starsLabel);info.append(num,label);card.append(info);grid.append(card);
+   const star=document.createElement("span");star.className="rank-stars"+(stars===0?" none":"");star.style.color=group.color;star.textContent="★".repeat(stars);
+   text.append(label,star);card.append(index,text);cards.append(card);
   });
-  section.append(grid);root.append(section);
+  section.append(cards);root.append(section);
  });
- empty.style.display=shown?"none":"block";
+ empty.style.display=total?"none":"block";
 }
 search.addEventListener("input",e=>render(e.target.value.trim()));render();
 </script>
