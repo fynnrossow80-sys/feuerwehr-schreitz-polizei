@@ -15,7 +15,7 @@ header:after{content:"";position:absolute;width:430px;height:430px;border:1px so
 .hero{max-width:1180px;margin:45px auto 18px;position:relative;z-index:1}.eyebrow{color:#e8c77f;font-size:12px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.02;margin:12px 0 13px;letter-spacing:-.04em}.hero p{margin:0;color:#d2dbea;font-size:16px;max-width:610px;line-height:1.65}
 main{max-width:1180px;margin:0 auto;padding:28px 22px 70px}.toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:28px}.intro{color:var(--muted);font-size:14px}.search{width:min(100%,330px);padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit;outline:none;box-shadow:0 3px 12px #17233808}.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2463a620}
 .section{margin:30px 0 38px}.section-head{display:flex;align-items:center;gap:12px;margin-bottom:15px}.section-head:after{content:"";height:1px;background:var(--line);flex:1}.section h2{font-size:19px;margin:0;letter-spacing:-.02em}.count{font-size:11px;color:var(--muted);background:#e8edf5;padding:5px 9px;border-radius:30px;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px}.rank{min-height:82px;background:white;border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;align-items:center;gap:16px;box-shadow:0 5px 18px #14233c08;transition:transform .18s,box-shadow .18s,border-color .18s}.rank:hover{transform:translateY(-3px);box-shadow:0 12px 25px #14233c12;border-color:#c8d5e7}.rank-name{font-weight:700;font-size:14px;line-height:1.4}.rank-num{font-size:10px;color:#8793a5;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px}.rank{min-height:82px;background:white;border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;align-items:center;gap:16px;box-shadow:0 5px 18px #14233c08;transition:transform .18s,box-shadow .18s,border-color .18s}.rank:hover{transform:translateY(-3px);box-shadow:0 12px 25px #14233c12;border-color:#c8d5e7}.rank-name{font-weight:700;font-size:14px;line-height:1.4}.insignia{width:132px;height:48px;flex:0 0 auto;display:block}.rank{gap:14px}.rank-info{min-width:0}.rank-num{font-size:10px;color:#8793a5;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px;font-weight:800}
 .empty{display:none;padding:30px;text-align:center;color:var(--muted);background:white;border-radius:14px}
 footer{background:#0b1529;color:#b9c6d8;text-align:center;padding:24px;font-size:12px}footer strong{color:white}
 @media(max-width:560px){header{padding:19px 20px}.hero{margin:35px 0 12px}.grid{grid-template-columns:1fr 1fr;gap:9px}.rank{padding:12px;min-height:110px;gap:10px;align-items:flex-start;flex-direction:column}.rank-name{font-size:13px}.toolbar{align-items:stretch}.search{width:100%}}
@@ -45,40 +45,48 @@ footer{background:#0b1529;color:#b9c6d8;text-align:center;padding:24px;font-size
 <script>
 const groups = [
  ["Einstieg",[
-  ["Praktikant","polizei-prak.png"]
+  ["Praktikant",0]
  ]],
  ["Mittlerer Dienst",[
-  ["Polizeimeisteranwärter (1/2)","polizei-pma.png"],
-  ["Polizeimeisteranwärter (2/2)","polizei-pma.png"],
-  ["Polizeimeister","polizei-pma.png"],
-  ["Polizeiobermeister","polizei-pom.png"],
-  ["Polizeihauptmeister","polizei-phm.png"],
-  ["Erster Polizeihauptmeister","polizei-ephm.png"]
+  ["Polizeimeisteranwärter (1/2)",0],
+  ["Polizeimeisteranwärter (2/2)",1],
+  ["Polizeimeister",1],
+  ["Polizeiobermeister",2],
+  ["Polizeihauptmeister",3],
+  ["Erster Polizeihauptmeister",4]
  ]],
  ["Gehobener Dienst",[
-  ["Polizeikommissaranwärter (1/2)","polizei-pka.png"],
-  ["Polizeikommissaranwärter (2/2)","polizei-pka.png"],
-  ["Polizeikommissar","polizei-pk.png"],
-  ["Polizeioberkommissar","polizei-pok.png"],
-  ["Polizeikommandant (A11)","polizei-phk-a11.png"],
-  ["Polizeihauptkommissar (A12)","polizei-phk-a12.png"],
-  ["Erster Polizeihauptkommissar","polizei-ephk.png"],
-  ["Erster Polizeihauptkommissar mit Amtszulage","polizei-ephkz.png"]
+  ["Polizeikommissaranwärter (1/2)",0],
+  ["Polizeikommissaranwärter (2/2)",1],
+  ["Polizeikommissar",1],
+  ["Polizeioberkommissar",2],
+  ["Polizeikommandant (A11)",3],
+  ["Polizeihauptkommissar (A12)",3],
+  ["Erster Polizeihauptkommissar",4],
+  ["Erster Polizeihauptkommissar mit Amtszulage",5]
  ]],
  ["Höherer Dienst",[
-  ["Polizeirat","polizei-pr.png"],
-  ["Polizeioberrat","polizei-por.png"],
-  ["Polizeidirektor","polizei-pd.png"],
-  ["Leitender Polizeidirektor","polizei-lpd.png"]
+  ["Polizeirat",1],
+  ["Polizeioberrat",2],
+  ["Polizeidirektor",3],
+  ["Leitender Polizeidirektor",4]
  ]],
  ["Führung",[
-  ["Direktor der Polizei","polizei-ddp.png"],
-  ["Landespolizeidirektor","polizei-landespd.png"],
-  ["Polizeivizepräsident","polizei-pvp.png"],
-  ["Polizeipräsident","polizei-pp.png"]
+  ["Direktor der Polizei",5],
+  ["Landespolizeidirektor",6],
+  ["Polizeivizepräsident",7],
+  ["Polizeipräsident",8]
  ]]
 ];
 const root=document.getElementById("sections"), search=document.getElementById("search"), empty=document.getElementById("empty");
+function insignia(count){
+ const stars=Array.from({length:count},(_,i)=>{
+  const x=count<=4?22+i*27:count<=6? (i<3?28+i*27:28+(i-3)*27): (i<4?18+i*30:33+(i-4)*30);
+  const y=count<=4?24:(i<4?16:34);
+  return '<polygon points="0,-8 2.4,-2.6 8,-2.6 3.5,1 5.2,7 0,3.6 -5.2,7 -3.5,1 -8,-2.6 -2.4,-2.6" transform="translate('+x+' '+y+')" fill="#f4d27b" stroke="#9a702d" stroke-width=".8"/>';
+ }).join("");
+ return '<svg class="insignia" viewBox="0 0 132 48" role="img" aria-label="'+count+' Sterne"><defs><linearGradient id="epaulette" x2="0" y2="1"><stop stop-color="#294b78"/><stop offset="1" stop-color="#102542"/></linearGradient></defs><path d="M5 8 Q5 4 10 4 H122 Q127 4 127 9 V39 Q127 44 122 44 H10 Q5 44 5 39 Z" fill="url(#epaulette)" stroke="#bdc8d6" stroke-width="2"/><path d="M10 8 H122" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>'+stars+'</svg>';
+}
 function render(q=""){
  root.innerHTML="";let shown=0;
  groups.forEach(([title,ranks])=>{
@@ -90,11 +98,11 @@ function render(q=""){
   const count=document.createElement("span");count.className="count";count.textContent=matches.length+" Ränge";
   head.append(h,count);section.append(head);
   const grid=document.createElement("div");grid.className="grid";
-  matches.forEach(([name,file],i)=>{
+  matches.forEach(([name,stars],i)=>{
    const card=document.createElement("article");card.className="rank";
-   const info=document.createElement("div");const num=document.createElement("div");num.className="rank-num";num.textContent="Dienstgrad";
+   const badge=document.createElement("div");badge.innerHTML=insignia(stars);const info=document.createElement("div");info.className="rank-info";const num=document.createElement("div");num.className="rank-num";num.textContent=stars+" Sterne";
    const label=document.createElement("div");label.className="rank-name";label.textContent=name;
-   info.append(num,label);card.append(info);grid.append(card);
+   info.append(num,label);card.append(badge.firstChild,info);grid.append(card);
   });
   section.append(grid);root.append(section);
  });
